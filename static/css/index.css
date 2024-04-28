@@ -114,12 +114,20 @@ body {
   overflow: hidden;
 }
 
+.results-carousel img {
+  width: 70%;
+  /* height: auto; */
+  margin: auto;
+  display:block;
+}
+
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
   padding: 20px;
   font-size: 0;
 }
+
 
 .results-carousel video {
   margin: 0;
