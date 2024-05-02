@@ -9,7 +9,7 @@
   <!-- <meta property="og:description" content="Large scale multi-modal remote sensing data"/> -->
   <meta property="og:url" content="https://vishalned.github.io/mmearth"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/images/banner2.jpg" />
+  <meta property="og:image" content="static/images/banner2.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/> 
 
@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="MMEarth">
   <!-- <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/banner2.jpg">
+  <meta name="twitter:image" content="static/images/banner2.png">
   <!-- <meta name="twitter:card" content="MMEarth"> -->
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="representation learning,self-supervised learning,multi-modal, multi-task, masked autoencoder, Earth observation, remote sensing, satellite images, Sentinel-2">
@@ -25,7 +25,7 @@
 
 
   <title>MMEarth</title>
-  <link rel="icon" type="image/x-icon" href="static/images/logo.png">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/logo.png"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -198,6 +198,15 @@
             <li>The six pixel-level modalities represent raster data of size 128 × 128 pixels which capture 1.28 km × 1.28 km on the ground 
               (e.g., Sentinel-2, Sentinel-1, Aster DEM, Dynamic World, and ESA World Cover). The remaining six image-level modalities represent scalar values for each location 
               (e.g., Biome, Ecoregion, ERA5 temperature, ERA5 precipitation, Geolocation, and Sentinel-2 observation date). 
+            </li>
+            <li>
+              The data can be downloaded from <a href="https://github.com/vishalned/MMEarth-data?tab=readme-ov-file#data-download" style="color:#3273dc;" target="_blank">here</a>. 
+              We provide 3 versions of the data to enable more research in the field of multi-modal representation learning.
+              <!-- list of 3 data -->
+              <ul>
+                <li>Version 1: 1.2 million locations with image size 128 × 128 pixels. This results in the data of size 639 GB</li>
+                <li>Version 2: 1.2 million locations with image size 64 × 64 pixels. This results in the data of size 163 GB</li>
+                <li>Version 3: 100k locations with image size 128 × 128 pixels. This results in the data of size 48 GB</li>
             </li>
         </div>
       </div>
