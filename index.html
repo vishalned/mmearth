@@ -48,6 +48,7 @@
 
 
   <section class="hero is-light">
+    
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
@@ -84,7 +85,7 @@
               </div>
 
                   <div class="is-size-5 publication-authors">
-                    <a href="https://di.ku.dk/english/" style="color:#3273dc;"
+                    <a href="https://di.ku.dk/english/" style="color:#3273dc;">
                     <span class="author-block">University of Copenhagen<br>
                       <!-- Conferance name and year -->
                     </span>
@@ -181,12 +182,12 @@
 <!-- End paper abstract -->
 
 <section class="section hero is-light">
+
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">MMEarth Dataset</h2>
         <div class="content has-text-justified">
-          <!-- some bullet points -->
           <ul>
             <li>MMEarth covers data from 1.2 million locations sampled globally, making the optical image count similar to ImageNet-1K. At each
               location, data from 12 geo-aligned modalities were collected and grouped into pixel-level and image-level modalities.
@@ -204,31 +205,73 @@
               We provide 3 versions of the data to enable more research in the field of multi-modal representation learning.
               <!-- list of 3 data -->
               <ul>
-                <li>Version 1: 1.2 million locations with image size 128 × 128 pixels. This results in the data of size 639 GB</li>
-                <li>Version 2: 1.2 million locations with image size 64 × 64 pixels. This results in the data of size 163 GB</li>
-                <li>Version 3: 100k locations with image size 128 × 128 pixels. This results in the data of size 48 GB</li>
+                <li><b>MMEarth:</b> 1.2 million locations with image size 128 × 128 pixels. This results in the data of size 639 GB.</li>
+                <li><b>MMEarth64:</b> 1.2 million locations with image size 64 × 64 pixels. This results in the data of size 163 GB.</li>
+                <li><b>MMEarth100k:</b> 100k locations with image size 128 × 128 pixels. This results in the data of size 48 GB.</li>
+              </ul>
             </li>
+            
+          </ul>
+
         </div>
+        
       </div>
+      
     </div>
+    <h2 class="title is-5 has-text-centered" style="padding-top: 10px;">Temporal and Spatial distribution of the data</h2>
+    <div>
+    <div class="" style="width: fit-content;">
+      <img src="static/images/temporal_distribution.png" alt="temporal_distribution" style="width:40%; float: left; padding: 5px; margin-left: 0em;">
+      <!-- <figcaption style="width: fit-content; height:fit-content;">
+        Temporal Distribution
+      </figcaption> -->
+    </div>
+    <div class="">
+      <img src="static/images/spatial_distribution.png" alt="spatial_distribution" style="width:60%; float: right; padding: 5px; margin-right: -5em;">
+      <!-- <figcaption style="width: fit-content; height: fit-content; float: right; margin-right: -5em;" >
+        Spatial Distribution
+      </figcaption> -->
+    </div>
+    </div>
+    
+
+    
   </div>
+
+  
+  
 </section>
+
+<!-- <section class="section is-light">
+  <div class="" style="width: fit-content;">
+    <img src="static/images/temporal_distribution.png" alt="temporal_distribution" style="width:30%; float: left;">
+  </div>
+  
+  <div class="">
+    <img src="static/images/spatial_distribution.png" alt="spatial_distribution" style="width:50%; float: left;">
+  </div>
+</section> -->
+
+<!-- <section class="section hero is-light">
+  
+</section> -->
+
 
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">MMEarth Model</h2>
+        <h2 class="title is-3">Multi-Pretext Masked Autoencoder (MP-MAE)</h2>
         <div class="content has-text-justified">
           <!-- adding an image -->
 
           <!-- some bullet points -->
           <ul>
-            <li>Our model, the Multi-Pretext Masked Autoencoder (MP-MAE), builds on the promising results of masked image modelling with the ConvNeXt V2 architecture.
+            <li>Our MP-MAE model, builds on the promising results of masked image modelling with the ConvNeXt V2 architecture.
               ConvNeXt V2 is a fully convolutional masked autoencoder (MAE) that uses sparse convolutions to predict the masked pixels of an image.
             </li>
-            <li>Our MP-MAE model extends ConvNeXt V2 by adding a task-specific head for each pretext task. The general-purpose representation is learned by combining the losses of all pretext tasks. 
-              For combining the losses, we use the uncertainty-weighted loss proposed by <a href="https://arxiv.org/abs/1705.07115" style="color:#3273dc;" target="_blank">Kendall et al. (2020)</a>.
+            <li>MP-MAE extends ConvNeXt V2 by adding a task-specific head for each pretext task. The general-purpose representation is learned by combining the losses of all pretext tasks. 
+          
 
         </div>
       </div>
@@ -245,8 +288,33 @@
 </section>
 
 
+<!-- section for experimental results -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experimental Results</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li>Domain specific pretraining improves representations (i.e. pretraining on optical satellite images).
+              Multi-spectral input images improve over RGB channels.</li>
+              <li>Multi-modal pretext tasks improve representations - especially for linear probing as well as in low-data scenarios.</li>
+              <li>Our MP-MAE compares favourably to prior work on SSL for Earth observation data - even with a small encoder</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="section hero is-light">
+    <figure class="model-image">
+      <img src="static/images/table_result_mp-mae2.png" alt="table results" style="width:40%">
+    </figure>
+  </section>
+  
+
 <!-- Image carousel -->
-<section class="hero is-small is-light">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <!-- create a title that is centered -->
@@ -278,6 +346,13 @@
        Fourth image description.
      </h2> -->
    </div>
+   <div class="item">
+    <!-- Your image here -->
+    <img src="static/images/carousel/img5.jpg" alt="MY ALT TEXT"/>
+    <!-- <h2 class="subtitle has-text-centered">
+     Fourth image description.
+   </h2> -->
+    </div>
      <!-- <div class="item"> -->
       <!-- Your image here -->
       <!-- <img src="static/images/carousel4.pdf" alt="MY ALT TEXT"/>

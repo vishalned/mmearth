@@ -19,6 +19,7 @@ a:hover {
   text-decoration: underline;
 }
 
+
 .footer .icon-link {
     font-size: 25px;
     color: #000;
@@ -111,8 +112,8 @@ a:hover {
 .publication-banner img {
 }
 
-.publication-authors {
-  /*color: #4286f4;*/
+.publication-authors a{
+ 
 }
 
 .publication-authors img {
