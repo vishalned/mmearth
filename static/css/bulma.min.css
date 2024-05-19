@@ -2337,7 +2337,7 @@ fieldset[disabled] .button {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     padding: 1.25em 1.5em;
-    white-space: pre;
+    white-space: pre-wrap;
     word-wrap: normal
 }
 
