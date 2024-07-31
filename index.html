@@ -310,6 +310,22 @@
   <section class="section hero is-light">
     <figure class="model-image">
       <img src="static/images/table_result_mp-mae.png" alt="table results" style="width:50%">
+      <figcaption style="width:70%; margin-left: 15%;">
+        <b>Table: Downstream performance.</b> Fine-tuning (FT) and linear probing (LP) performance for multi-pretext pretraining (MMEarth64) 
+        and masked image pretraining (ImageNet, MMEarth64-S2). Multi-pretext pretraining improves both FT and LP results.
+      </figcaption>
+
+    </figure>
+    <figure class="model-image" style="padding-top: 50px;">
+      <!-- stack 3 images size by side -->
+      <img src = "static/images/label_efficiency_t.png" alt="label_efficiency" style="width:80%">
+      <figcaption style="width:80%; margin-left: 10%;">
+        <b>Figure: Label efficiency for few-shot downstream performance.</b> Linear probing
+        performance for varying downstream dataset sizes. MP-MAE (‘Atto’) pretrained on
+        ImageNet, MMEarth64-S2 (multi-spectral only), MMEarth64 (all multi-modal pretext
+        tasks).
+      </figcaption>
+
     </figure>
   </section>
   
